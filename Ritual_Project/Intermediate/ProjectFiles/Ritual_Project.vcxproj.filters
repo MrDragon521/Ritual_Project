@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Ritual_Project.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Ritual_Project.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Ritual_ProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Ritual_Project">
+      <UniqueIdentifier>{62952A7A-F23B-3D19-97BB-53A2D2F7516C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Ritual_Project\Ritual_Project.Build.cs">
+      <Filter>Source\Ritual_Project</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Ritual_Project\Ritual_Project.cpp">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Ritual_Project.h">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Ritual_ProjectCameraManager.cpp">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Ritual_ProjectCameraManager.h">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Ritual_ProjectCharacter.cpp">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Ritual_ProjectCharacter.h">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Ritual_ProjectGameMode.cpp">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Ritual_ProjectGameMode.h">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Ritual_ProjectPlayerController.cpp">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Ritual_ProjectPlayerController.h">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Ritual_Project\DefaultItem.h">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\DefaultItem.cpp">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Ritual_Project\BaseQuest.cpp">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\BaseQuest.h">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClInclude>
+    <Filter Include="Source\Ritual_Project\Variant_Horror">
+      <UniqueIdentifier>{894A0A8C-3F3E-31C4-BD42-7DC6EC6619B1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Horror\HorrorCharacter.cpp">
+      <Filter>Source\Ritual_Project\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Horror\HorrorCharacter.h">
+      <Filter>Source\Ritual_Project\Variant_Horror</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Horror\HorrorGameMode.cpp">
+      <Filter>Source\Ritual_Project\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Horror\HorrorGameMode.h">
+      <Filter>Source\Ritual_Project\Variant_Horror</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Horror\HorrorPlayerController.cpp">
+      <Filter>Source\Ritual_Project\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Horror\HorrorPlayerController.h">
+      <Filter>Source\Ritual_Project\Variant_Horror</Filter>
+    </ClInclude>
+    <Filter Include="Source\Ritual_Project\Variant_Horror\UI">
+      <UniqueIdentifier>{632D315A-DD6E-3B51-B500-A09726FF69C7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Horror\UI\HorrorUI.cpp">
+      <Filter>Source\Ritual_Project\Variant_Horror\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Horror\UI\HorrorUI.h">
+      <Filter>Source\Ritual_Project\Variant_Horror\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\Ritual_Project\Variant_Shooter">
+      <UniqueIdentifier>{7C70E699-1608-3F23-8361-1AD88D07C50E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\ShooterCharacter.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\ShooterCharacter.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\ShooterGameMode.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\ShooterGameMode.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\ShooterPlayerController.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\ShooterPlayerController.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter</Filter>
+    </ClInclude>
+    <Filter Include="Source\Ritual_Project\Variant_Shooter\AI">
+      <UniqueIdentifier>{957A510B-B506-33A3-BDE3-001D4929F1FD}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\AI\EnvQueryContext_Target.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\AI\EnvQueryContext_Target.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\AI\ShooterAIController.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\AI\ShooterAIController.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\AI\ShooterNPC.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\AI\ShooterNPC.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\AI\ShooterStateTreeUtility.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\AI\ShooterStateTreeUtility.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <Filter Include="Source\Ritual_Project\Variant_Shooter\UI">
+      <UniqueIdentifier>{51B62703-5419-3AB5-8BD7-88A8EA4667AF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\UI\ShooterBulletCounterUI.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\UI\ShooterBulletCounterUI.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\UI\ShooterUI.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\UI\ShooterUI.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\Ritual_Project\Variant_Shooter\Weapons">
+      <UniqueIdentifier>{DD01580D-EF6E-37E4-AA17-9D8605FB8BDE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\Weapons\ShooterPickup.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\Weapons\ShooterPickup.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\Weapons\ShooterProjectile.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\Weapons\ShooterProjectile.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\Weapons\ShooterWeapon.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\Weapons\ShooterWeapon.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\Variant_Shooter\Weapons\ShooterWeaponHolder.cpp">
+      <Filter>Source\Ritual_Project\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\Weapons\ShooterWeaponHolder.h">
+      <Filter>Source\Ritual_Project\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\SOURCE\RITUAL_PROJECT\TASKMANAGER.CPP" />
+  </ItemGroup>
+</Project>

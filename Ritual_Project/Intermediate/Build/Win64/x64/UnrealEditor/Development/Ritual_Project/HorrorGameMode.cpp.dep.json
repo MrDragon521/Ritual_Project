@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\projects\\ritual_project\\source\\ritual_project\\variant_horror\\horrorgamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\projects\\ritual_project\\intermediate\\build\\win64\\x64\\ritual_projecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\projects\\ritual_project\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ritual_project\\definitions.ritual_project.h",
+            "d:\\projects\\ritual_project\\source\\ritual_project\\variant_horror\\horrorgamemode.h",
+            "g:\\epic\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "g:\\epic\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "g:\\epic\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "g:\\epic\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\projects\\ritual_project\\intermediate\\build\\win64\\unrealeditor\\inc\\ritual_project\\uht\\horrorgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

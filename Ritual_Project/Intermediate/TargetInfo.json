@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Ritual_Project",
+			"Path": "..\\Source\\Ritual_Project.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Ritual_ProjectEditor",
+			"Path": "..\\Source\\Ritual_ProjectEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
