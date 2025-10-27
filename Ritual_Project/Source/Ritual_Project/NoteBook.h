@@ -18,11 +18,10 @@ public:
 	UNoteBook();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubClassOf<UUserWidget> LobbyWidget;
+	TSubclassOf<UUserWidget> noteBookClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool testVar;
-
+	class UUserWidget* noteBookHUD;
 
 protected:
 	// Called when the game starts
@@ -31,6 +30,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	UFUNCTION(BlueprintCallable)
+	void setWidget(TSubclassOf<UUserWidget> _UIWidget);
+
+	UFUNCTION(BlueprintCallable)
+	void toggleNoteBook(TSubclassOf<UUserWidget> _UIWidget);
 
 		
 };

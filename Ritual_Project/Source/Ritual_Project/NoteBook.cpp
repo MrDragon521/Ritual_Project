@@ -32,3 +32,18 @@ void UNoteBook::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	// ...
 }
 
+void UNoteBook::setWidget(TSubclassOf<UUserWidget> _UIWidget)
+{
+	noteBookClass = _UIWidget;
+}
+
+void UNoteBook::toggleNoteBook(TSubclassOf<UUserWidget> _UIWidget)
+{
+	if (_UIWidget == nullptr)
+	{
+		_UIWidget = noteBookClass;
+	}
+
+	//UUserWidget* book = GetOwner(CreateWidget<UUserWidget>(GetController<GetOwner>, noteBookClass))
+}
+
