@@ -72,12 +72,21 @@
     <ClCompile Include="..\..\Source\Ritual_Project\DefaultItem.cpp">
       <Filter>Source\Ritual_Project</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Ritual_Project\TASKMANAGER.CPP">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Ritual_Project\BaseQuest.cpp">
       <Filter>Source\Ritual_Project</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Ritual_Project\BaseQuest.h">
       <Filter>Source\Ritual_Project</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Ritual_Project\NoteBook.h">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Ritual_Project\NoteBook.cpp">
+      <Filter>Source\Ritual_Project</Filter>
+    </ClCompile>
     <Filter Include="Source\Ritual_Project\Variant_Horror">
       <UniqueIdentifier>{894A0A8C-3F3E-31C4-BD42-7DC6EC6619B1}</UniqueIdentifier>
     </Filter>
@@ -198,8 +207,5 @@
     <ClInclude Include="..\..\Source\Ritual_Project\Variant_Shooter\Weapons\ShooterWeaponHolder.h">
       <Filter>Source\Ritual_Project\Variant_Shooter\Weapons</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\SOURCE\RITUAL_PROJECT\TASKMANAGER.CPP" />
   </ItemGroup>
 </Project>

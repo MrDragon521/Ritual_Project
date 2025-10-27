@@ -34,6 +34,7 @@
 			"Ritual_ProjectCharacter.cpp.obj",
 			"Ritual_ProjectGameMode.cpp.obj",
 			"Ritual_ProjectPlayerController.cpp.obj",
+			"TASKMANAGER.CPP.obj",
 			"HorrorCharacter.cpp.obj",
 			"HorrorGameMode.cpp.obj",
 			"HorrorPlayerController.cpp.obj",

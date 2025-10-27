@@ -4,25 +4,7 @@
 		{
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
-			"files": [
-				"D:/Projects/Ritual_Project/Content/MyTaskManager.uasset",
-				"D:/Projects/Ritual_Project/Content/Blueprints/Base_Gamemode_BP.uasset",
-				"D:/Projects/Ritual_Project/Content/Blueprints/Widgets/Objective_Info.uasset",
-				"D:/Projects/Ritual_Project/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset",
-				"D:/Projects/Ritual_Project/Content/Blueprints/Widgets/PlayerUI.uasset",
-				"D:/Projects/Ritual_Project/Content/Blueprints/Widgets/Quest_Info.uasset",
-				"D:/Projects/Ritual_Project/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/2/88/IEFPVXLA1Z3PQ5Z8GOJMWB.uasset",
-				"D:/Projects/Ritual_Project/Content/Blueprints/MyTaskManager.uasset",
-				"D:/Projects/Ritual_Project/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/4/Z6/RXOTB4WTULFYKRI42AF6RV.uasset",
-				"E:/Projects/Ritual_Project/Content/MyTaskManager.uasset",
-				"E:/Projects/Ritual_Project/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/E/I8/OMDW2B51GGY9IP5911FMPK.uasset",
-				"E:/Projects/Ritual_Project/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/4/Z6/RXOTB4WTULFYKRI42AF6RV.uasset",
-				"E:/Projects/Ritual_Project/Content/__ExternalActors__/FirstPerson/Lvl_FirstPerson/2/88/IEFPVXLA1Z3PQ5Z8GOJMWB.uasset",
-				"E:/Projects/Ritual_Project/Content/Blueprints/Base_Gamemode_BP.uasset",
-				"E:/Projects/Ritual_Project/Content/Blueprints/Widgets/Objective_Info.uasset",
-				"E:/Projects/Ritual_Project/Content/Blueprints/Widgets/PlayerUI.uasset",
-				"E:/Projects/Ritual_Project/Content/Blueprints/Widgets/Quest_Info.uasset"
-			]
+			"files": []
 		}
 	]
 }

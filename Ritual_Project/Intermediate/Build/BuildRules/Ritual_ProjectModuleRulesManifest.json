@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\Projects\\Ritual_Project\\Source\\Ritual_Project\\Ritual_Project.Build.cs",
-		"D:\\Projects\\Ritual_Project\\Source\\Ritual_Project.Target.cs",
-		"D:\\Projects\\Ritual_Project\\Source\\Ritual_ProjectEditor.Target.cs"
+		"D:\\GitRepo\\Ritual_Project\\Ritual_Project\\Source\\Ritual_Project\\Ritual_Project.Build.cs",
+		"D:\\GitRepo\\Ritual_Project\\Ritual_Project\\Source\\Ritual_Project.Target.cs",
+		"D:\\GitRepo\\Ritual_Project\\Ritual_Project\\Source\\Ritual_ProjectEditor.Target.cs"
 	],
 	"EngineVersion": "5.6.1"
 }
