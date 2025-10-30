@@ -16,8 +16,11 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class APlayerController;
+
 // ********** Begin Class ARitual_ProjectCharacter *************************************************
 #define FID_Ritual_Project_Source_Ritual_Project_Ritual_ProjectCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execToggleNoteBook); \
 	DECLARE_FUNCTION(execDoJumpEnd); \
 	DECLARE_FUNCTION(execDoJumpStart); \
 	DECLARE_FUNCTION(execDoMove); \

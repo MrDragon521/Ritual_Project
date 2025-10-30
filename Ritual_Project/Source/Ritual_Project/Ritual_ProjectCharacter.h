@@ -31,6 +31,13 @@ class ARitual_ProjectCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
 
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UUserWidget> noteBookHUDClass;
+
+	UPROPERTY()
+	class UUserWidget* noteBookHUD;
+
 protected:
 
 	/** Jump Input Action */
@@ -51,6 +58,8 @@ protected:
 	
 public:
 	ARitual_ProjectCharacter();
+
+	virtual void BeginPlay() override;
 
 protected:
 
@@ -75,6 +84,9 @@ protected:
 	/** Handles jump end inputs from either controls or UI interfaces */
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoJumpEnd();
+
+	UFUNCTION(BlueprintCallable)
+	void ToggleNoteBook(APlayerController* _playerController, bool _toggle);
 
 protected:
 

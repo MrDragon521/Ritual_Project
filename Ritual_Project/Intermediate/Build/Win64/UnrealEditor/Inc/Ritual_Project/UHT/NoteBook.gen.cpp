@@ -150,6 +150,7 @@ struct Z_Construct_UClass_UNoteBook_Statics
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
 		{ "IncludePath", "NoteBook.h" },
+		{ "Keywords", "Actor Owning Parent" },
 		{ "ModuleRelativePath", "NoteBook.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_noteBookClass_MetaData[] = {
@@ -219,10 +220,10 @@ UNoteBook::~UNoteBook() {}
 struct Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_NoteBook_h__Script_Ritual_Project_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UNoteBook, UNoteBook::StaticClass, TEXT("UNoteBook"), &Z_Registration_Info_UClass_UNoteBook, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNoteBook), 104860062U) },
+		{ Z_Construct_UClass_UNoteBook, UNoteBook::StaticClass, TEXT("UNoteBook"), &Z_Registration_Info_UClass_UNoteBook, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNoteBook), 3041425549U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_NoteBook_h__Script_Ritual_Project_2940815660(TEXT("/Script/Ritual_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_NoteBook_h__Script_Ritual_Project_2262216810(TEXT("/Script/Ritual_Project"),
 	Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_NoteBook_h__Script_Ritual_Project_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_NoteBook_h__Script_Ritual_Project_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -28,15 +28,18 @@ struct FObjective;
 // ********** End ScriptStruct FObjective **********************************************************
 
 // ********** Begin Class UBaseQuest ***************************************************************
-#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_41_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execsetNumObejctives); \
+#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execFinishQuest); \
+	DECLARE_FUNCTION(execFinishObjective); \
+	DECLARE_FUNCTION(execUpdateObjective); \
+	DECLARE_FUNCTION(execSetNumObejctives); \
 	DECLARE_FUNCTION(execSetUpObjective); \
 	DECLARE_FUNCTION(execSetQuestDetails);
 
 
 RITUAL_PROJECT_API UClass* Z_Construct_UClass_UBaseQuest_NoRegister();
 
-#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_41_INCLASS_NO_PURE_DECLS \
+#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_47_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUBaseQuest(); \
 	friend struct Z_Construct_UClass_UBaseQuest_Statics; \
@@ -47,7 +50,7 @@ public: \
 	DECLARE_SERIALIZER(UBaseQuest)
 
 
-#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_41_ENHANCED_CONSTRUCTORS \
+#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_47_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UBaseQuest(UBaseQuest&&) = delete; \
 	UBaseQuest(const UBaseQuest&) = delete; \
@@ -57,13 +60,13 @@ public: \
 	NO_API virtual ~UBaseQuest();
 
 
-#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_38_PROLOG
-#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_41_GENERATED_BODY \
+#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_44_PROLOG
+#define FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_47_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_41_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_41_INCLASS_NO_PURE_DECLS \
-	FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_41_ENHANCED_CONSTRUCTORS \
+	FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_47_INCLASS_NO_PURE_DECLS \
+	FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h_47_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

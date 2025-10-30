@@ -109,12 +109,23 @@ struct Z_Construct_UScriptStruct_FObjective_Statics
 		{ "Category", "Objective" },
 		{ "ModuleRelativePath", "BaseQuest.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_objectiveID_MetaData[] = {
+		{ "Category", "Objective" },
+		{ "ModuleRelativePath", "BaseQuest.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_isComplete_MetaData[] = {
+		{ "Category", "Objective" },
+		{ "ModuleRelativePath", "BaseQuest.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_clearType_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_clearType;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_item;
 	static const UECodeGen_Private::FStrPropertyParams NewProp_description;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_numRequired;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_objectiveID;
+	static void NewProp_isComplete_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_isComplete;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -127,12 +138,20 @@ const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FObjectiv
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FObjective_Statics::NewProp_item = { "item", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FObjective, item), Z_Construct_UClass_UClass, Z_Construct_UClass_ADefaultItem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_item_MetaData), NewProp_item_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FObjective_Statics::NewProp_description = { "description", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FObjective, description), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_description_MetaData), NewProp_description_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FObjective_Statics::NewProp_numRequired = { "numRequired", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FObjective, numRequired), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_numRequired_MetaData), NewProp_numRequired_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FObjective_Statics::NewProp_objectiveID = { "objectiveID", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FObjective, objectiveID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_objectiveID_MetaData), NewProp_objectiveID_MetaData) };
+void Z_Construct_UScriptStruct_FObjective_Statics::NewProp_isComplete_SetBit(void* Obj)
+{
+	((FObjective*)Obj)->isComplete = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FObjective_Statics::NewProp_isComplete = { "isComplete", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FObjective), &Z_Construct_UScriptStruct_FObjective_Statics::NewProp_isComplete_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_isComplete_MetaData), NewProp_isComplete_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FObjective_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FObjective_Statics::NewProp_clearType_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FObjective_Statics::NewProp_clearType,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FObjective_Statics::NewProp_item,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FObjective_Statics::NewProp_description,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FObjective_Statics::NewProp_numRequired,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FObjective_Statics::NewProp_objectiveID,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FObjective_Statics::NewProp_isComplete,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FObjective_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FObjective_Statics::StructParams = {
@@ -158,10 +177,81 @@ UScriptStruct* Z_Construct_UScriptStruct_FObjective()
 }
 // ********** End ScriptStruct FObjective **********************************************************
 
-// ********** Begin Class UBaseQuest Function setNumObejctives *************************************
-struct Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics
+// ********** Begin Class UBaseQuest Function FinishObjective **************************************
+struct Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics
 {
-	struct BaseQuest_eventsetNumObejctives_Parms
+	struct BaseQuest_eventFinishObjective_Parms
+	{
+		int32 _objectiveNum;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BaseQuest.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp__objectiveNum;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::NewProp__objectiveNum = { "_objectiveNum", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BaseQuest_eventFinishObjective_Parms, _objectiveNum), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::NewProp__objectiveNum,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UBaseQuest, nullptr, "FinishObjective", Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::PropPointers), sizeof(Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::BaseQuest_eventFinishObjective_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::BaseQuest_eventFinishObjective_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UBaseQuest_FinishObjective()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBaseQuest_FinishObjective_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UBaseQuest::execFinishObjective)
+{
+	P_GET_PROPERTY(FIntProperty,Z_Param__objectiveNum);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FinishObjective(Z_Param__objectiveNum);
+	P_NATIVE_END;
+}
+// ********** End Class UBaseQuest Function FinishObjective ****************************************
+
+// ********** Begin Class UBaseQuest Function FinishQuest ******************************************
+struct Z_Construct_UFunction_UBaseQuest_FinishQuest_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BaseQuest.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBaseQuest_FinishQuest_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UBaseQuest, nullptr, "FinishQuest", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_FinishQuest_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBaseQuest_FinishQuest_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UBaseQuest_FinishQuest()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBaseQuest_FinishQuest_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UBaseQuest::execFinishQuest)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FinishQuest();
+	P_NATIVE_END;
+}
+// ********** End Class UBaseQuest Function FinishQuest ********************************************
+
+// ********** Begin Class UBaseQuest Function SetNumObejctives *************************************
+struct Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics
+{
+	struct BaseQuest_eventSetNumObejctives_Parms
 	{
 		int32 _numObjectives;
 	};
@@ -174,31 +264,31 @@ struct Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::NewProp__numObjectives = { "_numObjectives", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BaseQuest_eventsetNumObejctives_Parms, _numObjectives), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::NewProp__numObjectives,
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::NewProp__numObjectives = { "_numObjectives", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BaseQuest_eventSetNumObejctives_Parms, _numObjectives), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::NewProp__numObjectives,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UBaseQuest, nullptr, "setNumObejctives", Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::PropPointers), sizeof(Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::BaseQuest_eventsetNumObejctives_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::Function_MetaDataParams)},  };
-static_assert(sizeof(Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::BaseQuest_eventsetNumObejctives_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UBaseQuest_setNumObejctives()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UBaseQuest, nullptr, "SetNumObejctives", Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::PropPointers), sizeof(Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::BaseQuest_eventSetNumObejctives_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::BaseQuest_eventSetNumObejctives_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UBaseQuest_SetNumObejctives()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBaseQuest_setNumObejctives_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBaseQuest_SetNumObejctives_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UBaseQuest::execsetNumObejctives)
+DEFINE_FUNCTION(UBaseQuest::execSetNumObejctives)
 {
 	P_GET_PROPERTY(FIntProperty,Z_Param__numObjectives);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->setNumObejctives(Z_Param__numObjectives);
+	P_THIS->SetNumObejctives(Z_Param__numObjectives);
 	P_NATIVE_END;
 }
-// ********** End Class UBaseQuest Function setNumObejctives ***************************************
+// ********** End Class UBaseQuest Function SetNumObejctives ***************************************
 
 // ********** Begin Class UBaseQuest Function SetQuestDetails **************************************
 struct Z_Construct_UFunction_UBaseQuest_SetQuestDetails_Statics
@@ -210,7 +300,13 @@ struct Z_Construct_UFunction_UBaseQuest_SetQuestDetails_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// declaring functions\n" },
+#endif
 		{ "ModuleRelativePath", "BaseQuest.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "declaring functions" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp__name;
@@ -304,14 +400,64 @@ DEFINE_FUNCTION(UBaseQuest::execSetUpObjective)
 }
 // ********** End Class UBaseQuest Function SetUpObjective *****************************************
 
+// ********** Begin Class UBaseQuest Function UpdateObjective **************************************
+struct Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics
+{
+	struct BaseQuest_eventUpdateObjective_Parms
+	{
+		int32 _objectiveNum;
+		int32 _updateValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BaseQuest.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp__objectiveNum;
+	static const UECodeGen_Private::FIntPropertyParams NewProp__updateValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::NewProp__objectiveNum = { "_objectiveNum", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BaseQuest_eventUpdateObjective_Parms, _objectiveNum), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::NewProp__updateValue = { "_updateValue", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BaseQuest_eventUpdateObjective_Parms, _updateValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::NewProp__objectiveNum,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::NewProp__updateValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UBaseQuest, nullptr, "UpdateObjective", Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::PropPointers), sizeof(Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::BaseQuest_eventUpdateObjective_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::BaseQuest_eventUpdateObjective_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UBaseQuest_UpdateObjective()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBaseQuest_UpdateObjective_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UBaseQuest::execUpdateObjective)
+{
+	P_GET_PROPERTY(FIntProperty,Z_Param__objectiveNum);
+	P_GET_PROPERTY(FIntProperty,Z_Param__updateValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateObjective(Z_Param__objectiveNum,Z_Param__updateValue);
+	P_NATIVE_END;
+}
+// ********** End Class UBaseQuest Function UpdateObjective ****************************************
+
 // ********** Begin Class UBaseQuest ***************************************************************
 void UBaseQuest::StaticRegisterNativesUBaseQuest()
 {
 	UClass* Class = UBaseQuest::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "setNumObejctives", &UBaseQuest::execsetNumObejctives },
+		{ "FinishObjective", &UBaseQuest::execFinishObjective },
+		{ "FinishQuest", &UBaseQuest::execFinishQuest },
+		{ "SetNumObejctives", &UBaseQuest::execSetNumObejctives },
 		{ "SetQuestDetails", &UBaseQuest::execSetQuestDetails },
 		{ "SetUpObjective", &UBaseQuest::execSetUpObjective },
+		{ "UpdateObjective", &UBaseQuest::execUpdateObjective },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -354,7 +500,13 @@ struct Z_Construct_UClass_UBaseQuest_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_name_MetaData[] = {
 		{ "Category", "BaseQuest" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// declaring varibles\n" },
+#endif
 		{ "ModuleRelativePath", "BaseQuest.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "declaring varibles" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_description_MetaData[] = {
 		{ "Category", "BaseQuest" },
@@ -372,9 +524,12 @@ struct Z_Construct_UClass_UBaseQuest_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UBaseQuest_setNumObejctives, "setNumObejctives" }, // 3543941881
-		{ &Z_Construct_UFunction_UBaseQuest_SetQuestDetails, "SetQuestDetails" }, // 1244190914
+		{ &Z_Construct_UFunction_UBaseQuest_FinishObjective, "FinishObjective" }, // 3070248723
+		{ &Z_Construct_UFunction_UBaseQuest_FinishQuest, "FinishQuest" }, // 2264544254
+		{ &Z_Construct_UFunction_UBaseQuest_SetNumObejctives, "SetNumObejctives" }, // 2940354514
+		{ &Z_Construct_UFunction_UBaseQuest_SetQuestDetails, "SetQuestDetails" }, // 1087767354
 		{ &Z_Construct_UFunction_UBaseQuest_SetUpObjective, "SetUpObjective" }, // 1295690561
+		{ &Z_Construct_UFunction_UBaseQuest_UpdateObjective, "UpdateObjective" }, // 3763750274
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -384,8 +539,8 @@ struct Z_Construct_UClass_UBaseQuest_Statics
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_UBaseQuest_Statics::NewProp_name = { "name", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBaseQuest, name), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_name_MetaData), NewProp_name_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_UBaseQuest_Statics::NewProp_description = { "description", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBaseQuest, description), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_description_MetaData), NewProp_description_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UBaseQuest_Statics::NewProp_objectives_Inner = { "objectives", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FObjective, METADATA_PARAMS(0, nullptr) }; // 3848739245
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UBaseQuest_Statics::NewProp_objectives = { "objectives", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBaseQuest, objectives), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_objectives_MetaData), NewProp_objectives_MetaData) }; // 3848739245
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UBaseQuest_Statics::NewProp_objectives_Inner = { "objectives", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FObjective, METADATA_PARAMS(0, nullptr) }; // 731779236
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UBaseQuest_Statics::NewProp_objectives = { "objectives", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBaseQuest, objectives), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_objectives_MetaData), NewProp_objectives_MetaData) }; // 731779236
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UBaseQuest_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBaseQuest_Statics::NewProp_name,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBaseQuest_Statics::NewProp_description,
@@ -432,13 +587,13 @@ struct Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_BaseQuest_
 		{ EClearCondition_StaticEnum, TEXT("EClearCondition"), &Z_Registration_Info_UEnum_EClearCondition, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 317873550U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FObjective::StaticStruct, Z_Construct_UScriptStruct_FObjective_Statics::NewStructOps, TEXT("Objective"), &Z_Registration_Info_UScriptStruct_FObjective, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FObjective), 3848739245U) },
+		{ FObjective::StaticStruct, Z_Construct_UScriptStruct_FObjective_Statics::NewStructOps, TEXT("Objective"), &Z_Registration_Info_UScriptStruct_FObjective, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FObjective), 731779236U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBaseQuest, UBaseQuest::StaticClass, TEXT("UBaseQuest"), &Z_Registration_Info_UClass_UBaseQuest, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBaseQuest), 777036895U) },
+		{ Z_Construct_UClass_UBaseQuest, UBaseQuest::StaticClass, TEXT("UBaseQuest"), &Z_Registration_Info_UClass_UBaseQuest, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBaseQuest), 3957893544U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h__Script_Ritual_Project_501000631(TEXT("/Script/Ritual_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h__Script_Ritual_Project_958497224(TEXT("/Script/Ritual_Project"),
 	Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h__Script_Ritual_Project_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h__Script_Ritual_Project_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h__Script_Ritual_Project_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h__Script_Ritual_Project_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h__Script_Ritual_Project_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_BaseQuest_h__Script_Ritual_Project_Statics::EnumInfo));

@@ -8,7 +8,7 @@
 #include "NoteBook.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), meta = (Keywords = "Actor Owning Parent"))
 class RITUAL_PROJECT_API UNoteBook : public UActorComponent
 {
 	GENERATED_BODY()
@@ -36,6 +36,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void toggleNoteBook(TSubclassOf<UUserWidget> _UIWidget);
+
+	//UFUNCTION(BlueprintCallable, Category = "Components", Meta = (Keywords = "Actor Owning Parent"))
+	//AActor* GetOwner() const
 
 		
 };

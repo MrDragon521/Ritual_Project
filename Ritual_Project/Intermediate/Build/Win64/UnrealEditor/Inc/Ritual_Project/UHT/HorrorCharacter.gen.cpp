@@ -413,10 +413,10 @@ AHorrorCharacter::~AHorrorCharacter() {}
 struct Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Horror_HorrorCharacter_h__Script_Ritual_Project_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AHorrorCharacter, AHorrorCharacter::StaticClass, TEXT("AHorrorCharacter"), &Z_Registration_Info_UClass_AHorrorCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHorrorCharacter), 4282702317U) },
+		{ Z_Construct_UClass_AHorrorCharacter, AHorrorCharacter::StaticClass, TEXT("AHorrorCharacter"), &Z_Registration_Info_UClass_AHorrorCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHorrorCharacter), 2782773196U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Horror_HorrorCharacter_h__Script_Ritual_Project_2100596571(TEXT("/Script/Ritual_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Horror_HorrorCharacter_h__Script_Ritual_Project_356591265(TEXT("/Script/Ritual_Project"),
 	Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Horror_HorrorCharacter_h__Script_Ritual_Project_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Horror_HorrorCharacter_h__Script_Ritual_Project_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

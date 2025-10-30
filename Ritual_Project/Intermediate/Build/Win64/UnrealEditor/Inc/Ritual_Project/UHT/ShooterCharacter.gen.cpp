@@ -492,10 +492,10 @@ AShooterCharacter::~AShooterCharacter() {}
 struct Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_ShooterCharacter_h__Script_Ritual_Project_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 2424523784U) },
+		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 3755539458U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_ShooterCharacter_h__Script_Ritual_Project_3227443068(TEXT("/Script/Ritual_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_ShooterCharacter_h__Script_Ritual_Project_3821874308(TEXT("/Script/Ritual_Project"),
 	Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_ShooterCharacter_h__Script_Ritual_Project_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_ShooterCharacter_h__Script_Ritual_Project_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

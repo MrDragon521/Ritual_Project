@@ -12,12 +12,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeRitual_ProjectCharacter() {}
 
 // ********** Begin Cross Module References ********************************************************
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 RITUAL_PROJECT_API UClass* Z_Construct_UClass_ARitual_ProjectCharacter();
 RITUAL_PROJECT_API UClass* Z_Construct_UClass_ARitual_ProjectCharacter_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Ritual_Project();
 // ********** End Cross Module References **********************************************************
 
@@ -201,6 +204,58 @@ DEFINE_FUNCTION(ARitual_ProjectCharacter::execDoMove)
 }
 // ********** End Class ARitual_ProjectCharacter Function DoMove ***********************************
 
+// ********** Begin Class ARitual_ProjectCharacter Function ToggleNoteBook *************************
+struct Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics
+{
+	struct Ritual_ProjectCharacter_eventToggleNoteBook_Parms
+	{
+		APlayerController* _playerController;
+		bool _toggle;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Ritual_ProjectCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__playerController;
+	static void NewProp__toggle_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp__toggle;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::NewProp__playerController = { "_playerController", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Ritual_ProjectCharacter_eventToggleNoteBook_Parms, _playerController), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::NewProp__toggle_SetBit(void* Obj)
+{
+	((Ritual_ProjectCharacter_eventToggleNoteBook_Parms*)Obj)->_toggle = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::NewProp__toggle = { "_toggle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(Ritual_ProjectCharacter_eventToggleNoteBook_Parms), &Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::NewProp__toggle_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::NewProp__playerController,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::NewProp__toggle,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARitual_ProjectCharacter, nullptr, "ToggleNoteBook", Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::Ritual_ProjectCharacter_eventToggleNoteBook_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::Ritual_ProjectCharacter_eventToggleNoteBook_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ARitual_ProjectCharacter::execToggleNoteBook)
+{
+	P_GET_OBJECT(APlayerController,Z_Param__playerController);
+	P_GET_UBOOL(Z_Param__toggle);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleNoteBook(Z_Param__playerController,Z_Param__toggle);
+	P_NATIVE_END;
+}
+// ********** End Class ARitual_ProjectCharacter Function ToggleNoteBook ***************************
+
 // ********** Begin Class ARitual_ProjectCharacter *************************************************
 void ARitual_ProjectCharacter::StaticRegisterNativesARitual_ProjectCharacter()
 {
@@ -210,6 +265,7 @@ void ARitual_ProjectCharacter::StaticRegisterNativesARitual_ProjectCharacter()
 		{ "DoJumpEnd", &ARitual_ProjectCharacter::execDoJumpEnd },
 		{ "DoJumpStart", &ARitual_ProjectCharacter::execDoJumpStart },
 		{ "DoMove", &ARitual_ProjectCharacter::execDoMove },
+		{ "ToggleNoteBook", &ARitual_ProjectCharacter::execToggleNoteBook },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -280,6 +336,14 @@ struct Z_Construct_UClass_ARitual_ProjectCharacter_Statics
 		{ "ToolTip", "First person camera" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_noteBookHUDClass_MetaData[] = {
+		{ "Category", "Ritual_ProjectCharacter" },
+		{ "ModuleRelativePath", "Ritual_ProjectCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_noteBookHUD_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Ritual_ProjectCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_JumpAction_MetaData[] = {
 		{ "Category", "Input" },
 #if !UE_BUILD_SHIPPING
@@ -323,6 +387,8 @@ struct Z_Construct_UClass_ARitual_ProjectCharacter_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FirstPersonMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FirstPersonCameraComponent;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_noteBookHUDClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_noteBookHUD;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
@@ -334,6 +400,7 @@ struct Z_Construct_UClass_ARitual_ProjectCharacter_Statics
 		{ &Z_Construct_UFunction_ARitual_ProjectCharacter_DoJumpEnd, "DoJumpEnd" }, // 2458377818
 		{ &Z_Construct_UFunction_ARitual_ProjectCharacter_DoJumpStart, "DoJumpStart" }, // 3841113684
 		{ &Z_Construct_UFunction_ARitual_ProjectCharacter_DoMove, "DoMove" }, // 4258744617
+		{ &Z_Construct_UFunction_ARitual_ProjectCharacter_ToggleNoteBook, "ToggleNoteBook" }, // 4185893331
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -343,6 +410,8 @@ struct Z_Construct_UClass_ARitual_ProjectCharacter_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_FirstPersonMesh = { "FirstPersonMesh", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARitual_ProjectCharacter, FirstPersonMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonMesh_MetaData), NewProp_FirstPersonMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_FirstPersonCameraComponent = { "FirstPersonCameraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARitual_ProjectCharacter, FirstPersonCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonCameraComponent_MetaData), NewProp_FirstPersonCameraComponent_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_noteBookHUDClass = { "noteBookHUDClass", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARitual_ProjectCharacter, noteBookHUDClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_noteBookHUDClass_MetaData), NewProp_noteBookHUDClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_noteBookHUD = { "noteBookHUD", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARitual_ProjectCharacter, noteBookHUD), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_noteBookHUD_MetaData), NewProp_noteBookHUD_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARitual_ProjectCharacter, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpAction_MetaData), NewProp_JumpAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARitual_ProjectCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARitual_ProjectCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
@@ -350,6 +419,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARitual_Projec
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARitual_ProjectCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_FirstPersonMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_FirstPersonCameraComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_noteBookHUDClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_noteBookHUD,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_JumpAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_MoveAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARitual_ProjectCharacter_Statics::NewProp_LookAction,
@@ -392,10 +463,10 @@ ARitual_ProjectCharacter::~ARitual_ProjectCharacter() {}
 struct Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Ritual_ProjectCharacter_h__Script_Ritual_Project_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARitual_ProjectCharacter, ARitual_ProjectCharacter::StaticClass, TEXT("ARitual_ProjectCharacter"), &Z_Registration_Info_UClass_ARitual_ProjectCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARitual_ProjectCharacter), 2610536489U) },
+		{ Z_Construct_UClass_ARitual_ProjectCharacter, ARitual_ProjectCharacter::StaticClass, TEXT("ARitual_ProjectCharacter"), &Z_Registration_Info_UClass_ARitual_ProjectCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARitual_ProjectCharacter), 3291911715U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Ritual_ProjectCharacter_h__Script_Ritual_Project_2453243090(TEXT("/Script/Ritual_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Ritual_ProjectCharacter_h__Script_Ritual_Project_3566904610(TEXT("/Script/Ritual_Project"),
 	Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Ritual_ProjectCharacter_h__Script_Ritual_Project_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Ritual_ProjectCharacter_h__Script_Ritual_Project_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

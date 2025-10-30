@@ -33,7 +33,48 @@ void UBaseQuest::SetUpObjective(int _objectiveNum, TSubclassOf<ADefaultItem> _it
 	}
 }
 
-void UBaseQuest::setNumObejctives(int _numObjectives)
+void UBaseQuest::SetNumObejctives(int _numObjectives)
 {
 	objectives.SetNum(_numObjectives);
+}
+
+void UBaseQuest::UpdateObjective(int _objectiveNum, int _updateValue)
+{
+	if (_objectiveNum < objectives.Num())
+	{
+		objectives[_objectiveNum].numRequired -= _updateValue;
+
+		UE_LOG(LogTemp, Warning, TEXT("You need to perform that action %d more times."), objectives[_objectiveNum].numRequired);
+
+		if (objectives[_objectiveNum].numRequired <= 0)
+		{
+			FinishObjective(_objectiveNum);
+		}
+	}
+}
+
+void UBaseQuest::FinishObjective(int _objectiveNum)
+{
+	if (_objectiveNum < objectives.Num())
+	{
+		objectives[_objectiveNum].isComplete = true;
+		
+		int numFinished = 0;
+		for (int i = 0; i < objectives.Num(); i++)
+		{
+			if (objectives[i].isComplete)
+			{
+				numFinished++;
+			}
+		}
+
+		if (numFinished >= objectives.Num())
+		{
+			FinishQuest();
+		}
+	}
+}
+
+void UBaseQuest::FinishQuest()
+{
 }

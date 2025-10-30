@@ -3,7 +3,33 @@
     "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
     "runs": [
         {
-            "results": [],
+            "results": [
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'UUserWidget::RemoveFromViewport': RemoveFromViewport is deprecated. Use RemoveFromParent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///D:/GitRepo/Ritual_Project/Ritual_Project/Intermediate/Build/Win64/x64/UnrealEditor/Development/Ritual_Project/Module.Ritual_Project.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/GitRepo/Ritual_Project/Ritual_Project/Source/Ritual_Project/Ritual_ProjectCharacter.cpp"
+                                },
+                                "region": {
+                                    "startLine": 144,
+                                    "startColumn": 16,
+                                    "snippet": {
+                                        "text": "\t\tnoteBookHUD->RemoveFromViewport();"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
             "tool": {
                 "driver": {
                     "name": "MSVC",

@@ -290,10 +290,10 @@ AShooterNPC::~AShooterNPC() {}
 struct Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_AI_ShooterNPC_h__Script_Ritual_Project_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterNPC, AShooterNPC::StaticClass, TEXT("AShooterNPC"), &Z_Registration_Info_UClass_AShooterNPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterNPC), 318301012U) },
+		{ Z_Construct_UClass_AShooterNPC, AShooterNPC::StaticClass, TEXT("AShooterNPC"), &Z_Registration_Info_UClass_AShooterNPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterNPC), 2569311491U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_AI_ShooterNPC_h__Script_Ritual_Project_3648652212(TEXT("/Script/Ritual_Project"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_AI_ShooterNPC_h__Script_Ritual_Project_2565907421(TEXT("/Script/Ritual_Project"),
 	Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_AI_ShooterNPC_h__Script_Ritual_Project_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ritual_Project_Source_Ritual_Project_Variant_Shooter_AI_ShooterNPC_h__Script_Ritual_Project_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -33,6 +33,12 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int numRequired;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int objectiveID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool isComplete;
 };
 
 UCLASS(BlueprintType)
@@ -44,6 +50,7 @@ class RITUAL_PROJECT_API UBaseQuest : public UObject
 
 public:
 
+	// declaring functions
 	UFUNCTION(BlueprintCallable)
 	void SetQuestDetails(FString _name, FString _description);
 
@@ -51,8 +58,18 @@ public:
 	void SetUpObjective(int _objectiveNum, TSubclassOf<ADefaultItem> _item, FString _description, int _numRequired);
 
 	UFUNCTION(BlueprintCallable)
-	void setNumObejctives(int _numObjectives);
+	void SetNumObejctives(int _numObjectives);
 
+	UFUNCTION(BlueprintCallable)
+	void UpdateObjective(int _objectiveNum, int _updateValue);
+
+	UFUNCTION(BlueprintCallable)
+	void FinishObjective(int _objectiveNum);
+
+	UFUNCTION(BlueprintCallable)
+	void FinishQuest();
+
+	// declaring varibles
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString name;
 

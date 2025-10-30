@@ -1,5 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+#include "Blueprint/UserWidget.h"
+
 #include "Ritual_ProjectCharacter.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
@@ -9,6 +11,7 @@
 #include "InputActionValue.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Ritual_Project.h"
+#include <Ritual_ProjectPlayerController.h>
 
 ARitual_ProjectCharacter::ARitual_ProjectCharacter()
 {
@@ -42,6 +45,12 @@ ARitual_ProjectCharacter::ARitual_ProjectCharacter()
 	// Configure character movement
 	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;
 	GetCharacterMovement()->AirControl = 0.5f;
+}
+
+void ARitual_ProjectCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
 }
 
 void ARitual_ProjectCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -117,4 +126,21 @@ void ARitual_ProjectCharacter::DoJumpEnd()
 {
 	// pass StopJumping to the character
 	StopJumping();
+}
+
+void ARitual_ProjectCharacter::ToggleNoteBook(APlayerController* _playerController, bool _toggle)
+{
+	if (IsLocallyControlled() && noteBookHUDClass && _toggle)
+	{
+		//ARitual_ProjectPlayerController* RPC = GetController<ARitual_ProjectPlayerController>();
+		check(_playerController);
+		noteBookHUD = CreateWidget<UUserWidget>(_playerController, noteBookHUDClass);
+		check(noteBookHUD);
+		noteBookHUD->AddToPlayerScreen();
+	}
+	else if (noteBookHUD && !_toggle)
+	{
+		check(noteBookHUD);
+		noteBookHUD->RemoveFromViewport();
+	}
 }

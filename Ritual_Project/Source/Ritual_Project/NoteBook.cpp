@@ -9,8 +9,6 @@ UNoteBook::UNoteBook()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
 }
 
 
@@ -44,6 +42,8 @@ void UNoteBook::toggleNoteBook(TSubclassOf<UUserWidget> _UIWidget)
 		_UIWidget = noteBookClass;
 	}
 
-	//UUserWidget* book = GetOwner(CreateWidget<UUserWidget>(GetController<GetOwner>, noteBookClass))
+	//UUserWidget* book = AActor::GetOwner(CreateWidget<UUserWidget>(GetController<GetOwner>, noteBookClass))
+
+	//UUserWidget* book = GetOwner(CreateWidget<UUserWidget>(GetController<GetOwner>, note))
 }
 
